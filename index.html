@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#b94f4b"><title>Dolce • Sorveteria de Verão</title><link rel="icon" href="assets/icone.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><script src="game.js" defer></script></head>
+<body>
+<div class="awning"></div>
+<header><div class="brand"><span class="mark">d.</span><div><h1>dolce ✿</h1><small>SORVETES & DIAS FELIZES</small></div></div><p class="tagline">☀ Um pedacinho de verão<br><small>Dia de Sorveteria · nível <span id="level">1</span></small></p><nav><button id="sound" aria-pressed="false">♫ Som</button><button id="shop">✿ Melhorias</button></nav></header>
+<main>
+<section class="stats" aria-label="Placar"><div>CAIXA DO DIA<strong id="cash">R$ 0,00</strong></div><div>PONTUAÇÃO<strong id="score">0</strong></div><div>COMBO<strong id="combo">0 ×1</strong></div><div>RECORDE<strong id="record">0</strong></div><div>FECHAMOS EM<strong id="time">3:00</strong><button id="pause" aria-label="Pausar" disabled>Ⅱ</button></div></section>
+<div class="workspace">
+<aside class="orders"><small class="eyebrow">UM SORVETE, UM SORRISO ✿</small><div class="customer"><div id="avatar"></div><h2 id="customer-name">Clara</h2><p id="reaction">“Um sorvetinho, por favor!”</p></div><article class="ticket"><small>PEDIDO DA VEZ <span id="number">#001</span></small><h3 id="order-cone">Waffle</h3><div id="order-balls"></div><p id="order-top"></p><hr><div class="patience"><span id="mood">♡ Com muita vontade</span><b id="wait">50s</b></div><div class="meter" role="progressbar" aria-label="Paciência do cliente" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><i id="patience-fill"></i></div></article><p class="queue">VEM GENTE POR AÍ<br><span>♧ ♡ ✿</span></p></aside>
+<section class="station"><div class="station-title"><small class="eyebrow">FEITO COM CARINHO</small><h2>Um verão em cada bola.</h2><p>Escolha, empilhe e espalhe felicidade.</p></div><div id="assembly" class="assembly" tabindex="0" role="button" aria-label="Bancada: colocar a bola selecionada"><span class="flower">✿</span><span class="flower second">✳</span><div id="ice-cream"></div><div class="pedestal"></div><p id="assembly-hint">01 · Pegue uma casquinha abaixo</p></div><div class="station-bottom"><button id="undo" disabled>↶ Desfazer</button><button id="clear" disabled>♲ Limpar</button><small>clique ou arraste até a bancada</small></div></section>
+<aside class="delivery"><em>la dolce vita ✿</em><h2>Capriche na<br>última bola.</h2><p>Confira o cartão e entregue um pouquinho de felicidade.</p><div id="checks"></div><button id="serve" class="primary" disabled>Entregar pedido →</button><small>Um atendimento perfeito vale mais!</small><div class="daily"><small>MIMOS DO DIA</small><h3 id="served">0 sorrisos servidos</h3><p id="satisfaction">Satisfação: 100%</p></div></aside>
+</div>
+<section class="ingredients"><div class="ingredient-head"><h2>Seu balcão de delícias</h2><div><button id="tab-flavors" class="active" aria-pressed="true">Sabores</button><button id="tab-toppings" aria-pressed="false">Coberturas</button></div></div><div class="counter"><section class="cones"><h3><i>01</i> A casquinha</h3><div id="cones"></div></section><section class="flavors"><h3><i>02</i> <span id="ingredient-title">As bolas de sorvete</span></h3><div id="flavors"></div><div id="toppings" hidden></div></section></div></section>
+<footer><em>✿ Pequenos prazeres, grandes dias.</em><small>RECEITA DA CASA: CARINHO + SORVETE</small></footer>
+</main>
+<div id="toast" role="status" aria-live="polite" hidden></div><div id="drag-ghost" aria-hidden="true" hidden></div>
+<dialog id="dialog" aria-labelledby="modal-title"><div id="modal"></div></dialog>
+<noscript>Ative o JavaScript no navegador para jogar.</noscript>
+</body></html>
